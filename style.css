@@ -5,10 +5,11 @@
 --cor-cabecalho: #FFFFFF;
 --branco: #FFFFFF;
 --amarelo: #FFCD2F;
---roxo-degrade: linear-gradient(94.49deg,#733887 35.48%,#C75EEB 143.32%);--roxo-degrade
+--roxo-degrade: linear-gradient(94.49deg,#733887 35.48%,#C75EEB 143.32%);
 --roxo: #733887;
---font-principal: "popins";
+--font-principal: "Poppins"
 }
+
 body{
     background-color: var(--cor-de-fundo);
     margin: 0;
@@ -35,10 +36,17 @@ body{
     display: none;
 }
 
-@media screen and (min-width: 820px) {
-    .container__titulo, .container__titulo--negrito {
+@media screen and (min-width: 1024px) {
+    .container__titulo{
+        font-family: var(--fonte-secundaria);
         font-size: 30px;
+        font-weight: 400;
+        display: block;
     }
+}
+.container__titulo--negrito {
+    font-weight: 700;
+}
 
     .container__titulo {
         font-weight: 400;
@@ -51,4 +59,15 @@ body{
             font-size: 20px;
             display: block;
 }
+    }
+
+    @import url(styles/header.css);
+
+    :root{
+        --cor-de-fundo: #EBECEE;
+        --branco: #FFFFFF;
+        --amarelo: #FECD2F;
+        --roxo-degrade: linear-gradient(94.49deg, #733887 35.48%, #c75EEB 143.32%);
+        --fonte-principal: "Poppins"
+        --fonte-secundaria: "Josefin Sans"
     }
